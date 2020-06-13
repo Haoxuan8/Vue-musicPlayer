@@ -1,0 +1,55 @@
+$header-height: 60px;
+$searchbar-width: 160px;
+$dialog-width: 420px;
+
+// Colors
+$whitesmoke: #f1f1f1;
+$grey-dark: #999;
+$grey-dim: #666;
+$black-light: #555;
+
+$blue: #58B2DC;
+$blue-light: #cceeff;
+$blue-dim: #2196f3;
+$blue-deep: #0069b1;
+$sakura: #e87a90;
+$sakura-light: #fedfe1;
+
+$purple: #d68fe9;
+$purple-dark: #b28fce;
+$purple-dim: #986db2;
+$purple-deep: #b854d4;
+
+
+// Background
+$bg-white: rgba(255, 255, 255, 0.3);
+$bg-white-dim: rgba(255, 255, 255, 0.65);
+$bg-white-deep: rgba(255, 255, 255, 0.8);
+$bg-dark: rgba(0, 0, 0, 0.1);
+$bg-dark-dim: rgba(0, 0, 0, 0.2);
+$bg-dark-deep: rgba(0, 0, 0, 0.3);
+$bg-aplayer: rgba(178, 143, 206, 0.65);
+$bg-sp-color: #f4f8fb;
+$bg-dark-line: rgba(0, 0, 0, 0.08);
+
+// Font size
+$font-size-base: 14px;
+$font-size-icon: 24px;
+$font-size-code: $font-size-base - 1px;
+$font-size-normal: $font-size-base + 1px;
+$font-size-small: $font-size-base - 2px;
+$font-size-large: $font-size-base + 2px;
+$font-size-smaller: $font-size-base - 4px;
+$font-size-larger: $font-size-base + 4px;
+
+//Shadow
+$card-shadow: 0 0 2px 0 $bg-dark, 0px 2px 2px 0 $bg-dark-dim;
+$card-shadow-base: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.24);
+$card-shadow-base-hover: 0 10px 20px $bg-dark-dim, 0 6px 6px $bg-dark-deep;
+$card-shadow-light: 0 14px 38px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.06);
+$card-shadow-light-hover: 0 14px 38px rgba(0, 0, 0, 0.14), 0 3px 8px rgba(0, 0, 0, 0.12);
+$block-shadow: #aaa 0px 10px 10px -10px inset, #aaa 0px -10px 10px -10px inset;
+$img-shadow: rgba(0, 0, 0, 0.1) 0 10px 12px;
+$header-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+                0px 4px 5px 0px rgba(0,0,0,0.14), 
+                0px 1px 10px 0px rgba(0,0,0,0.12);

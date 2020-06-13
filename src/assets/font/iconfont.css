@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1880590_3xjha0slcsv.eot?t=1591946939390'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1880590_3xjha0slcsv.eot?t=1591946939390#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOEAAsAAAAAB3wAAAM3AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCXIJPATYCJAMMCwgABCAFhG0HQBufBhHVmzHI/pScXn1T/YBkGzGZuuGMN7WrI0hzx9PFSy6HekMTDP6pOk7x4UpaJgJqv9c9+C8AoABldHh8FKBlGwXkogDHxyZthev4quh6NuIdjavZ3UMS43V//krt3ROIMONXo5F5eV66vb8N7lJK4IBTzyUvABJhobkJNICGWDVnVGl89QkTlBmfVpZtcJ/C91dqgrpKTTUAnCBOvTnUMPfH/eS/EM+3trlElkUl7QY4bh1QN45GUiAD8i3Dq10KB32bgFqDdNCSvasvLBlZFBCO4mPDYWV0ckN6UC0oKnZm4Q4qquMN3gFwG3w//AebVBNVErJy+bGLgvuDp0PK2KUtzwDX01kg7yNhCsiEnUrbmo4CU4haUzbN8YUsiFO5GRPwLEWx0T9eJBRIaj0Yw8HIL5xJ4M/ZI4IECjS4i/cJTiaL9fVd4v763bMzy/m59fSUnpwEMIlvyEnHnJ3lN0yGco6jLhuPqTvPH62n9/TeWnHDnei1rUvyXAeUjZ9YJleHts/bcXq+3Hju0d4zTidOj88yxh3BEnd3xyyc7emOccJ2JVl45LUvTk9DFPmmp/tiMZI4eBVNT1PdL/YU8+31bQFlAztip0dpE3E/lcdP7hEX2LBCfOEPC75SV37LgpPqmaH5V8JrKnEkgxcXg66YCHoymJznWGLSf/39mVDiWIyTcGsriJOg8QjmmwNlQ/okBT/oN4ofMB8qsv1XBj+3x1YwpywBp0ug+vTtgd9RMYiSTSlCok/ZMMiTByWzRvZF1FI3JRBXq7vhio7OqQTVOhKIqgxAUm0IydgpqKgzDYVqs1BrksP+Om0ytJBrMKEaQdBsDqJG3yFptotk7C1UdHqHQnMS1FqJ7MQ6I7HtAaMWdNT8ybbzpJhRDmH6Dfo91JwWBrgX2Fs3pVGSD58wgadY4z86E1GkeB6pQPdhGGZaeHZoJTIiSx7HqupJUTuPwQFGLeio+ZNt50l5reVQ+PwN+j3U3FDXZH2BvR2e0ijpgJxkU6e6W3nEf3QmokjxPFKBpmEYZlqqpzm0EpkBviWPaTPVVRYtrxjfbxtcSH6HSmd06ReEbw+e6hGbUXNrggAA') format('woff2'),
+  url('//at.alicdn.com/t/font_1880590_3xjha0slcsv.woff?t=1591946939390') format('woff'),
+  url('//at.alicdn.com/t/font_1880590_3xjha0slcsv.ttf?t=1591946939390') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1880590_3xjha0slcsv.svg?t=1591946939390#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-username:before {
+  content: "\e600";
+}
+
+.icon-search:before {
+  content: "\e854";
+}
+

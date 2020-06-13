@@ -1,0 +1,72 @@
+#header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  background-color: $blue;
+  color: white;
+  box-shadow: $header-shadow;
+
+  @include sp-layout {
+    justify-content: space-around;
+  }
+
+  .header-title {
+    flex-basis: 70%;
+    text-align: center;
+    font-size: $font-size-larger;
+    font-weight: 700;
+
+    @include sp-layout {
+      display: none;
+    }
+  }
+  .search {
+    flex-basis: 15%;
+
+    @include sp-layout {
+      flex-basis: 70%;
+    }
+  }
+
+  .dialog-content {
+    input {
+      width: 100%;
+      padding: 0 15px;
+      height: 40px;
+      border-radius: 5px;
+      box-shadow: none;
+    }
+
+    p {
+      color: $black-light;
+    }
+  }
+
+  .usericon {
+    margin-left: 20px;
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    
+    i {
+      vertical-align: middle;
+    }
+
+    span {
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 90px;
+    vertical-align: middle;
+  }
+}

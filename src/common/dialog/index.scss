@@ -1,0 +1,74 @@
+.dialog-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+  z-index: 100;
+
+  button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: $bg-dark-dim;
+    transition: all ease-out .1s;
+
+    &:hover {
+      background-color: $bg-dark;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 10px;
+    }
+  }
+
+  .dialog-wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $dialog-width;
+    border-radius: 5px;
+    background-color: $bg-white;
+    padding: 15px;
+    box-shadow: $card-shadow-base;
+
+    @include sp-layout {
+      width: 95%;
+    }
+
+    .dialog-head {
+      font-size: $font-size-larger;
+      font-weight: 700;
+      color: $black-light;
+    }
+
+    .dialog-content {
+      min-height: 50px;
+      padding: 20px 5px;
+    }
+
+    .dialog-btns {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-confirm {
+      background-color: $sakura;
+      color: $whitesmoke;
+
+      &:hover {
+        background-color: $sakura-light;
+        color: $black-light;
+      }
+    }
+  }
+}
+
+.dialog-fade-enter-active {
+  animation: fadeInDown .3s;
+}
+
+.dialog-fade-leave-active {
+  animation: fadeInDown .2s reverse;
+}

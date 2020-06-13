@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: .05rem;
+}
+
+body {
+  font-size: $font-size-base;
+  color: $black-light;
+  font-family: 'Fira Mono', 'Noto Serif SC', -apple-system, Roboto, Helvetica Neue, sans-serif;
+}
+
+input {
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background-color: $whitesmoke;
+  transition: box-shadow ease .3s;
+  color: $black-light;
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  &:focus {
+    box-shadow: $card-shadow-base;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
