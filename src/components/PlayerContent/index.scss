@@ -1,0 +1,38 @@
+.player-content {
+  padding: $header-height 0 $playerbar-height 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .router-view-container {
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  @include pc-layout {
+    display: flex;
+
+    .router-view-container {
+      flex: 1;
+      @include scrollBar;
+    }
+
+    .router-view-fade-enter-active {
+      animation: fadeInLeft .3s;
+    }
+
+    .router-view-fade-leave-active {
+      animation: fadeInLeft .3s reverse;
+    }
+  }
+
+  @include sp-layout {
+    .menu-view, .router-view-container, .detail-view {
+      position: absolute;
+      top: $header-height;
+      bottom: $playerbar-height;
+      width: 100%;
+    }
+  }
+
+}

@@ -1,6 +1,11 @@
 $header-height: 60px;
+$playerbar-height: 80px;
+$menu-item-height: 43px;
 $searchbar-width: 160px;
 $dialog-width: 420px;
+$menu-width-pc: 250px;
+$detail-width-pc: 250px;
+$progress-width-pc: 700px;
 
 // Colors
 $whitesmoke: #f1f1f1;
@@ -25,12 +30,16 @@ $purple-deep: #b854d4;
 $bg-white: rgba(255, 255, 255, 0.3);
 $bg-white-dim: rgba(255, 255, 255, 0.65);
 $bg-white-deep: rgba(255, 255, 255, 0.8);
-$bg-dark: rgba(0, 0, 0, 0.1);
-$bg-dark-dim: rgba(0, 0, 0, 0.2);
+$bg-dark: rgba(0, 0, 0, 0.05);
+$bg-dark-dim: rgba(0, 0, 0, 0.15);
 $bg-dark-deep: rgba(0, 0, 0, 0.3);
 $bg-aplayer: rgba(178, 143, 206, 0.65);
 $bg-sp-color: #f4f8fb;
-$bg-dark-line: rgba(0, 0, 0, 0.08);
+$bg-dark-line: rgba(0, 0, 0, 0.04);
+
+$bg-grey: #f5f5f5;
+$bg-grey-deep: #e5e5e5;
+$bg-grey-light: #f9f9f9;
 
 // Font size
 $font-size-base: 14px;
@@ -53,3 +62,9 @@ $img-shadow: rgba(0, 0, 0, 0.1) 0 10px 12px;
 $header-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
                 0px 4px 5px 0px rgba(0,0,0,0.14), 
                 0px 1px 10px 0px rgba(0,0,0,0.12);
+
+$player-shadow: 0px -1px 4px -1px rgba(0,0,0,0.15),
+                0px -2px 5px 0px rgba(0,0,0,0.1), 
+                0px -1px 10px 0px rgba(0,0,0,0.11);
+
+$header-shadow-light: 0 4px 5px rgba(0, 0, 0, 0.08), 0 3px 8px rgba(0, 0, 0, 0.06);               

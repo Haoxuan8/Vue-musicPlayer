@@ -1,31 +1,29 @@
 <template>
   <div id="app">
     <Header/>
-    <router-view></router-view>
-    <p>2</p>
-    <p>2</p>
-    <p>2</p>
-    <p>2</p>
-    {{u}}
+    <PlayerContent/>
+    <MusicPlayer/>
   </div>
 </template>
 
 <script>
 import Header from 'components/Header'
+import PlayerContent from 'components/PlayerContent'
+import MusicPlayer from 'components/MusicPlayer'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    PlayerContent,
+    MusicPlayer
   },
   data() {
     return {
-      u: this.$store.state
     }
   }
 }
 </script>
 
 <style>
-
 </style>

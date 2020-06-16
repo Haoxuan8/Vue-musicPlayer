@@ -1,0 +1,13 @@
+.playlist-container {
+  overflow: hidden;
+  overflow-y: auto;
+
+  .playlist-table {
+    background-color: white;
+    padding: 10px 40px;
+
+    @include sp-layout {
+      padding: 10px 5px;
+    }
+  }
+}

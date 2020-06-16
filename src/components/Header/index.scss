@@ -3,19 +3,23 @@
   top: 0;
   left: 0;
   right: 0;
+  padding: 0 50px;
   height: $header-height;
   display: flex;
   align-items: center;
   background-color: $blue;
   color: white;
   box-shadow: $header-shadow;
+  z-index: 10;
 
   @include sp-layout {
     justify-content: space-around;
+    position: fixed;
+    padding: 0;
   }
 
   .header-title {
-    flex-basis: 70%;
+    flex-grow: 1;
     text-align: center;
     font-size: $font-size-larger;
     font-weight: 700;
@@ -25,7 +29,9 @@
     }
   }
   .search {
-    flex-basis: 15%;
+    @include pc-layout {
+      width: 185px;
+    }
 
     @include sp-layout {
       flex-basis: 70%;
@@ -61,6 +67,13 @@
       margin-left: 8px;
       vertical-align: middle;
     }
+
+    @include sp-layout {
+      margin-left: 4px;
+      span {
+        display: none;
+      }
+    }
   }
 
   .avatar {
@@ -68,5 +81,14 @@
     height: 30px;
     border-radius: 90px;
     vertical-align: middle;
+  }
+
+  .icon-list::before {
+    vertical-align: middle;
+    font-size: 30px;
+
+    @include pc-layout {
+      display: none;
+    }
   }
 }

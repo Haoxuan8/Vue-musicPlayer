@@ -17,3 +17,19 @@ export function getUserPlaylist(uid) {
     }
   })
 }
+
+export function getPlayList(id) {
+  return axios.get('/playlist/detail', {
+    params: {
+      id
+    }
+  })
+}
+
+export function getMusicDetail(ids) {
+  return axios.get('/song/detail', {
+    params: {
+      ids
+    }
+  })
+}

@@ -1,0 +1,16 @@
+.tabs {
+  display: flex;
+  border-bottom: .5px solid $bg-dark;
+
+  .tab {
+    margin: 0 12px;
+    padding: 12px 0;
+    cursor: pointer;
+  }
+
+  .tab-active {
+    font-weight: 600;
+    color: $sakura;
+    border-bottom: 4px solid $sakura;
+  }
+}

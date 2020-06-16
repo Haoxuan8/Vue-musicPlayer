@@ -1,6 +1,11 @@
 <template>
   <div>
-    this is Home
+    <p>Home</p>
+    <p>Home</p>
+    <p>Home</p>
+    <p>Home</p>
+    <p>Home</p>
+    <p>Home</p>
   </div>
 </template>
 
