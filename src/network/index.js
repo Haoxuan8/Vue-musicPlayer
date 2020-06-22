@@ -60,3 +60,7 @@ export function getPlaylistComment(id, page) {
     }
   })
 }
+
+export function getPersonalizedList() {
+  return axios.get('/personalized')
+}

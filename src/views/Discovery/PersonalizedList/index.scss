@@ -1,0 +1,73 @@
+.personalized-list {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: $font-size-larger;
+    font-weight: 600;
+    padding: 20px;
+
+    @include sp-layout {
+      padding: 7px;
+    }
+
+    .show-more {
+      align-self: flex-end;
+      font-size: $font-size-small;
+      font-weight: 500;
+      color: $sakura;
+      cursor: pointer;
+
+    }
+  }
+
+  .personalized-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+
+    .personalized-item{
+      width: 20%;
+      padding: 10px 20px 20px 20px;
+
+      @include sp-layout {
+        width: 33%;
+        padding: 7px;
+      }
+
+      .img-wrap {
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: .3s all ease;
+        }
+      }
+
+      .text {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;  
+      }
+
+      &:hover {
+        .img-wrap img {
+          box-shadow: $card-shadow-base-hover;
+        }
+        .text {
+          color: $sakura;
+        }
+      }
+    }
+  }
+}
+
+.card-fade-in-enter-active {
+  animation: fadeInDown .3s;
+}
+
+.card-fade-in-leave-active {
+  animation: fadeInDown .3s reverse;
+}

@@ -1,0 +1,9 @@
+.discovery {
+  padding: 10px 30px;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  user-select: text;
+
+  @include scrollBar;
+}
