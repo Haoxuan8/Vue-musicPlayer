@@ -1,0 +1,12 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  color: $purple-deep;
+  font-weight: 700;
+  .iconfont {
+    font-size: 25px;
+    cursor: pointer;
+  }
+}

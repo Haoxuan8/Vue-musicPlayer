@@ -1,5 +1,11 @@
+import config from '@/config'
+
 export const getMenuShowSp = state => {
   return state.menuShowSp
+}
+
+export const getLyricShowSp = state => {
+  return state.lyricShowSp
 }
 
 export const getAlertShow = state => {
@@ -18,8 +24,28 @@ export const getCurrMusic = state => {
   return state.playList[state.currMusicIndex]
 }
 
+export const getCurrMusicAlImg = state => {
+  const music = getCurrMusic(state)
+  return music ? music.al.picUrl : config.playerCoverImg
+}
+
+export const getCurrPlayList = state => {
+  return state.playList
+}
+
 export const getLoading = state => {
   return state.loading
+}
+
+export const getPercent = state => {
+  if(state.playList.length > 0)
+    return state.currTime / state.playList[state.currMusicIndex].dt
+  else
+    return 0
+}
+
+export const getHistoryList = state => {
+  return state.historyList
 }
 
 export const getUserList = state => {

@@ -2,7 +2,7 @@
   <header id="header">
     <i class="iconfont icon-list" @click="menuClick"></i>
     <div class="header-title">
-      播放器
+      {{$config.headerTitle}}
     </div>  
     <Search class="search"></Search>
     <div @click="showDialog(0)" class="usericon" v-if="!islogged">
@@ -80,6 +80,7 @@ export default{
       this.$store.commit('setUid', null)
       this.$refs.logoutDialog.hide()
       this.$router.push('/')
+      this.$store.commit('clearPlayList')
     },
     alertConfirm() {
       this.$store.commit('toggleAlertShow')

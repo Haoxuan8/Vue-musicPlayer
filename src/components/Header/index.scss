@@ -34,7 +34,7 @@
     }
 
     @include sp-layout {
-      flex-basis: 70%;
+      flex: 1;
     }
   }
 
@@ -69,7 +69,8 @@
     }
 
     @include sp-layout {
-      margin-left: 4px;
+      padding: 0 10px;
+      margin-left: 0;
       span {
         display: none;
       }
@@ -83,9 +84,10 @@
     vertical-align: middle;
   }
 
-  .icon-list::before {
+  .icon-list {
     vertical-align: middle;
     font-size: 30px;
+    padding: 0 10px;
 
     @include pc-layout {
       display: none;

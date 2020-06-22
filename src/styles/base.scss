@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   letter-spacing: .05rem;
+  touch-action: pan-y;
 }
 
 body {
@@ -9,6 +10,16 @@ body {
   font-family: 'Fira Mono', 'Noto Serif SC', -apple-system, Roboto, Helvetica Neue, sans-serif;
   margin: 0;
   padding: 0;
+  user-select: none;
+}
+
+::selection {
+  background-color: $purple;
+  color: white;
+}
+
+img {
+  box-shadow: $img-shadow;
 }
 
 input {
@@ -32,6 +43,11 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  padding: 9px 12px;
+  border-radius: 7px;
+  background-color: $sakura;
+  color: white;
+  box-shadow: $img-shadow;
 }
 
 html, body, #app {

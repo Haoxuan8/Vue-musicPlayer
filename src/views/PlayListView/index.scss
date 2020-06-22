@@ -1,10 +1,17 @@
 .playlist-container {
   overflow: hidden;
   overflow-y: auto;
+  height: 100%;
+  @include scrollBar;
+  @include sp-layout {
+    @include hideScrollBar;
+  }
+
 
   .playlist-table {
     background-color: white;
     padding: 10px 40px;
+    min-height: 250px;
 
     @include sp-layout {
       padding: 10px 5px;

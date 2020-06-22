@@ -1,7 +1,7 @@
 <template>
-  <div class="song-list">
-    <li v-for="(item,index) in songs" :key="index" class="song-item">
-      <div class="img-wrap">
+  <div class="song-list" :class="{'song-list-mini': mini}">
+    <li v-for="(item,index) in songs" :key="index" class="song-item" @click="musicClick(index)">
+      <div class="img-wrap" v-if="imgShow">
         <img v-lazy="item.al.picUrl" alt="">
       </div>
       <div class="song-title">
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { formatDTime } from '@/utlis/common'
+import { formatDTime } from 'utlis/common'
 
 export default{
   name: 'SongTable',
@@ -24,6 +24,14 @@ export default{
     songs: {
       type: Array,
       default: () => []
+    },
+    imgShow: {
+      type: Boolean,
+      default: true
+    },
+    mini: {
+      type: Boolean,
+      default: false
     }
   },
   data(){
@@ -32,6 +40,10 @@ export default{
   methods:{
     formatDTime(time) {
       return formatDTime(time)
+    },
+    musicClick(index) {
+      this.$store.commit('setPlayList', this.songs)
+      this.$store.commit('setCurrMusicIndex', index)
     }
   }
 }

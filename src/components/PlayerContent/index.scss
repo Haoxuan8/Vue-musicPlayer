@@ -4,17 +4,11 @@
   height: 100%;
   position: relative;
 
-  .router-view-container {
-    overflow: hidden;
-    overflow-y: auto;
-  }
-
   @include pc-layout {
     display: flex;
 
     .router-view-container {
       flex: 1;
-      @include scrollBar;
     }
 
     .router-view-fade-enter-active {
@@ -27,7 +21,7 @@
   }
 
   @include sp-layout {
-    .menu-view, .router-view-container, .detail-view {
+    .menu-view, .router-view-container, .lyric-view {
       position: absolute;
       top: $header-height;
       bottom: $playerbar-height;

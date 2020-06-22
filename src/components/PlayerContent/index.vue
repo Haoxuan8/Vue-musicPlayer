@@ -9,19 +9,19 @@
           </router-view>
         </transition>
       </div>
-    <detail class="detail-view"/>
+    <Lyric class="lyric-view"/>
   </div>
 </template>
 
 <script>
 import Menu from './Menu'
-import Detail from './Detail'
+import Lyric from './Lyric'
 
 export default{
   name: 'PlayerContent',
   components: {
     Menu,
-    Detail
+    Lyric
   },
   data(){
     return{}

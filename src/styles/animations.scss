@@ -21,3 +21,26 @@
     transform: translateX(0%);
   }
 }
+
+
+@keyframes fadeInUpScaleX {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scaleX(0.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%) scaleX(1);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

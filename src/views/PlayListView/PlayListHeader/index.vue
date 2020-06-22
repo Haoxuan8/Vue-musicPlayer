@@ -13,14 +13,16 @@
         <div class="creator-name">{{creatorName}}</div>
         <div class="create-time">创建于 {{getCreateDate}}</div>
       </div>
-      <div class="action-wrap"></div>
+      <div class="action-wrap">
+        <button @click="playallClick">播放全部</button>
+      </div>
       <div class="desc-wrap"></div>
     </div>
   </div>
 </template>
 
 <script>
-import { formatDate } from '@/utlis/common'
+import { formatDate } from 'utlis/common'
 
 export default{
   name: 'PlayListHeader',
@@ -50,6 +52,9 @@ export default{
     return{}
   },
   methods:{
+    playallClick() {
+      this.$emit('playallClick')
+    }
   },
   computed: {
     getCreateDate() {

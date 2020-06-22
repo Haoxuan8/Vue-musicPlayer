@@ -1,10 +1,12 @@
 <template>
-  <div ref="Progress" class="progress" @mousedown="progressClick" @touchstart.prevent="progressClick">
-    <div ref="ProgressBar" class="progress-bar"></div>
-    <div ref="ProgressInner" class="progress-inner">
-      <div ref="ProgressDot" class="progress-dot" :class="{'progress-dot-active': isDragging}"
-        @mousedown="barDown"
-        @touchstart.prevent="barDown">
+  <div>
+    <div ref="Progress" class="progress" @mousedown="progressClick" @touchstart="progressClick">
+      <div ref="ProgressBar" class="progress-bar"></div>
+      <div ref="ProgressInner" class="progress-inner">
+        <div ref="ProgressDot" class="progress-dot" :class="{'progress-dot-active': isDragging}"
+          @mousedown="barDown"
+          @touchstart.prevent="barDown">
+        </div>
       </div>
     </div>
   </div>
@@ -21,7 +23,7 @@ export default{
   },
   data(){
     return{
-      startX: 0,
+      startX: -1,
       isDragging: false
     }
   },
@@ -47,8 +49,7 @@ export default{
       document.removeEventListener('touchend', this.barUp)
     },
     progressClick(e) {
-      e.preventDefault()
-      const endX = e.clientX
+      const endX = e.clientX || e.touches[0].pageX
       const offsetWidth = Math.min(this.$refs.ProgressBar.clientWidth, 
                               Math.max(0, endX - this.startX))
       this.moveDot(offsetWidth)
@@ -60,7 +61,7 @@ export default{
     barMove(e) {
       if(this.isDragging){
         e.preventDefault()
-        const endX = e.clientX
+        const endX = e.clientX || e.touches[0].pageX
         const offsetWidth = Math.min(this.$refs.ProgressBar.clientWidth, 
                               Math.max(0, endX - this.startX))
         this.moveDot(offsetWidth)
@@ -83,11 +84,16 @@ export default{
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      this.bindEvents()
+    this.bindEvents()
+    setTimeout(() => {
       const rect = this.$refs.ProgressBar.getBoundingClientRect()
       this.startX = rect.left
-    })
+    },100)
+
+    if(!this.isDragging) {
+        const offsetWidth = this.percent * this.$refs.ProgressBar.clientWidth
+        this.moveDot(offsetWidth)
+    }
   },
   beforeDestroy() {
     this.unbindEvents()
