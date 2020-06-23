@@ -6,4 +6,8 @@
   user-select: text;
 
   @include scrollBar;
+
+  @include sp-layout {
+    @include hideScrollBar;
+  }
 }
